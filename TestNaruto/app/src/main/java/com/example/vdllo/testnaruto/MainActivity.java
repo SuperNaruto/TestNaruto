@@ -16,4 +16,10 @@ public class MainActivity extends AppCompatActivity {
     //闪屏完成
 
     //登录完成
+
+    //胡耐心是猪
+
+    //这我都知道
+
+    //happy
 }

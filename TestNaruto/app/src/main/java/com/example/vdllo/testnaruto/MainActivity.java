@@ -14,4 +14,6 @@ public class MainActivity extends AppCompatActivity {
     //创建好了
 
     //闪屏完成
+
+    //登录完成
 }

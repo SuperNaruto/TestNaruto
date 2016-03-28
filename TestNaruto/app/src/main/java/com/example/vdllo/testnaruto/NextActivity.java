@@ -12,4 +12,9 @@ public class NextActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
     }
+
+
+    private void initData() {
+        //网络解析
+    }
 }

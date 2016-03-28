@@ -4,10 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn;
+    private ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "小胡小胡,下雨不愁", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //图片
+        imageView = (ImageView) findViewById(R.id.iv);
     }
 
     //创建好了

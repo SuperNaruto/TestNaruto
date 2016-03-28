@@ -12,9 +12,12 @@ public class NextActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
     }
+<<<<<<< HEAD
 
 
     private void initData() {
         //网络解析
     }
+=======
+>>>>>>> parent of 9cc55c5... 上下滑动Activity
 }

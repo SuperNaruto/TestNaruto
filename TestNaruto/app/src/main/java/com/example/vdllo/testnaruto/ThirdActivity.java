@@ -9,18 +9,19 @@ import android.widget.Toast;
 /**
  * Created by dllo on 16/3/28.
  */
-public class NextActivity extends AppCompatActivity{
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_next);
-    }
+public class ThirdActivity extends AppCompatActivity{
 
     //手指按下的点为(x1,y1),手指离开屏幕的点为(x2,y2)
     float x1 = 0;
     float y1 = 0;
     float x2 = 0;
     float y2 = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_third);
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -35,16 +36,18 @@ public class NextActivity extends AppCompatActivity{
             x2 = event.getX();
             y2 = event.getY();
             if (y1 - y2 > 50) {
-                Toast.makeText(NextActivity.this, "向上滑", Toast.LENGTH_SHORT).show();
-            } else if (y2 - y1 > 50) {
-                Toast.makeText(NextActivity.this, "向下滑", Toast.LENGTH_SHORT).show();
-//这里就可以跳转了
-                Intent intent = new Intent(this, ThirdActivity.class); //方法1
+                Toast.makeText(ThirdActivity.this, "向上滑", Toast.LENGTH_SHORT).show();
+
+                //这里就可以跳转了
+                Intent intent = new Intent(this, NextActivity.class); //方法1
                 startActivity(intent);
+            } else if (y2 - y1 > 50) {
+                Toast.makeText(ThirdActivity.this, "向下滑", Toast.LENGTH_SHORT).show();
+
             } else if (x1 - x2 > 50) {
-                Toast.makeText(NextActivity.this, "向左滑", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ThirdActivity.this, "向左滑", Toast.LENGTH_SHORT).show();
             } else if (x2 - x1 > 50) {
-                Toast.makeText(NextActivity.this, "向右滑", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ThirdActivity.this, "向右滑", Toast.LENGTH_SHORT).show();
             }
         }
         return super.onTouchEvent(event);

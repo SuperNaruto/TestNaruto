@@ -12,4 +12,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //创建好了
+
+    //闪屏完成
 }
